@@ -1,10 +1,5 @@
-#! /usr/bin/env python
-
 import psycopg2
-
 DBNAME = "news"
-
-
 def run_query(query):
     """Connects to the database, runs the query passed to it,
     and returns the results"""
@@ -14,7 +9,6 @@ def run_query(query):
     rows = c.fetchall()
     db.close()
     return rows
-
 
 def get_top_articles():
     """Returns top 3 most read articles"""
